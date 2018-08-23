@@ -45,6 +45,13 @@ public class CatalogActivity extends AppCompatActivity {
         displayDatabaseInfo();
     }
 
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+        displayDatabaseInfo();
+    }
+
     /**
      * Temporary helper method to display information in the onscreen TextView about the state of
      * the pets database.
@@ -92,6 +99,9 @@ public class CatalogActivity extends AppCompatActivity {
         // The third argument is the ContentValues object containing the info for Toto.
         long newRowId = db.insert(PetEntry.TABLE_NAME, null, values);
     }
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
