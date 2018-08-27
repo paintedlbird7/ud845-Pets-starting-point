@@ -69,7 +69,7 @@ public class PetProvider extends ContentProvider {
         SQLiteDatabase database = mDBHelper.getReadableDatabase();
 
         // This cursor will hold the result of the query
-        Cursor cursor;
+        Cursor cursor = null;
 
         // Figure out if the URI matcher can match the URI to a specific code
         int match = sUriMatcher.match(uri);
